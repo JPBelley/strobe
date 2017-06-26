@@ -1,0 +1,39 @@
+body {
+    font-family: sans-serif;   
+}
+ 
+.container {
+    margin: auto;
+    width: 800px;
+}
+button {
+	background-color: rgba(0,0,0,0);
+	border: white 2px solid;
+	margin: 3px 0;
+}
+/*Synth Controls*/
+#synthControls {
+	background-color: black;
+	padding: 5px;
+	display: flex;
+}
+.osc {
+	padding: 10px;
+	border: 3px solid white;
+	width: 10%;
+	margin-right: 5px;
+}
+.oscType {
+	vertical-align: middle;
+}
+.detune {
+	padding: 10px;
+	border: 2px solid white;
+	width: 20px;
+}
+#masterVol {
+	padding: 10px;
+	border: 3px solid white;
+	width: 10%;
+	margin-right: 5px;
+}

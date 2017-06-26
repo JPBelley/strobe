@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Strobe Studio</title>
+
+  <!-- stylesheets -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+</head>
+<body>
+	<div class="container">
+
+        <h1>Synthesizer</h1>
+
+        <!-- This is the analog synth part -->
+        <div id="synthControls">
+          <div class="osc">
+            <button class="defOscillator" data-name="sine"><img class="oscType" src="img/icons/sine.png" width="20px"></button>
+            <button class="defOscillator" data-name="square"><img class="oscType" src="img/icons/square.png" width="20px"></button>
+            <button class="defOscillator" data-name="sawtooth"><img class="oscType" src="img/icons/sawtooth.png" width="20px"></button>
+            <button id="test"  style="display: none;">DEBUG</button><!-- just for test purspose -->
+          </div>
+          <div class="osc">
+            <button class="defOscillator2" data-name="sine"><img class="oscType" src="img/icons/sine.png" width="20px"></button>
+            <button class="defOscillator2" data-name="square"><img class="oscType" src="img/icons/square.png" width="20px"></button>
+            <button class="defOscillator2" data-name="sawtooth"><img class="oscType" src="img/icons/sawtooth.png" width="20px"></button>
+            <button id="test" style="display: none;">DEBUG</button><!-- just for test purspose -->
+          </div>
+          <div id="masterVol">
+            <p>
+              <label for="amount" style="color: white;">Vol:</label>
+              <input type="text" id="amount" readonly style="border:0; font-weight:bold; width: 30px;">
+            </p>
+             
+            <div id="slider-vertical" style="height:200px; float: right;"></div>
+          </div>
+        </div>
+        <!-- This is the keyboard -->
+        <div id="keyboard"></div>
+    </div>
+
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous">
+    </script>
+
+    <!-- jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- Synth Javascript -->
+    <script src="js/qwerty-hancock.js"></script>
+    <script src="js/synth.js"></script>
+
+</body>
+</html>
