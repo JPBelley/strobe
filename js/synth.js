@@ -2,10 +2,10 @@
 $(document).ready(function() {
     $(".defOscillator").click(function() {
        defOscillator = $(this).attr("data-name");
-    });
-
-    $("#test").click(function() {
-       alert(defOscillator);
+       // Button CLicked
+       var sineType1 = "#" + defOscillator;
+       $(".defOscillator").css("background-color", "black");
+       $(sineType1).css("background-color", "rgba(255,255,255,0.4)");
     });
 });
 
@@ -13,10 +13,10 @@ $(document).ready(function() {
 $(document).ready(function() {
     $(".defOscillator2").click(function() {
        defOscillator2 = $(this).attr("data-name");
-    });
-
-    $("#test").click(function() {
-       alert(defOscillator2);
+       // Button CLicked
+       var sineType2 = "#" + defOscillator2 + "2";
+       $(".defOscillator2").css("background-color", "black");
+       $(sineType2).css("background-color", "rgba(255,255,255,0.4)");
     });
 });
 
