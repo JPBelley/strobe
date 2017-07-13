@@ -21,7 +21,8 @@ $(document).ready(function() {
 });
 
 // Control of the masterVolume
-    // jQuery UI interface
+    // jQuery UI interface 
+    var data = null;
 $( function() {
   $( "#slider-vertical" ).slider({
     orientation: "vertical",
@@ -31,10 +32,16 @@ $( function() {
     value: 60,
     slide: function( event, ui ) {
       $( "#amount" ).val( ui.value );
+      var data = ui.value;
+      // console.log(ui.value);
+      // var data = ui.value;
+      // return data;
     }
   });
   $( "#amount" ).val( $( "#slider-vertical" ).slider( "value" ) );
 } );
+      console.log(data);
+
 // The keyboard
 var keyboard = new QwertyHancock({
      id: 'keyboard',
@@ -49,7 +56,7 @@ var context = new AudioContext(),
     masterVolume = context.createGain(),
     oscillators = {};
 
-masterVolume.gain.value = 0.2;
+masterVolume.gain.value = 100;
 
 masterVolume.connect(context.destination);
 
